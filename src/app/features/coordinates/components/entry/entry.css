@@ -1,0 +1,14 @@
+.actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.delete{
+    color:snow;
+    background-color: red;
+    border-style: solid;
+    border-color: black;
+}
+.cell{
+    border-style: dotted;
+}

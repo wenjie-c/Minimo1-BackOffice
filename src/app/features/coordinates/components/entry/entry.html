@@ -1,0 +1,25 @@
+<tr>
+  <th class="cell">Id</th>
+  <th class="cell">Latitude</th>
+  <th class="cell">Longitude</th>
+  <th class="cell">Accuracy</th>
+  <th class="cell">Actions</th>
+</tr>
+<tr>
+  <td class="column cell">{{ coordinates()?._id }}</td>
+  <td class="column cell">{{ coordinates()?.latitude }}</td>
+  <td class="column cell">{{ coordinates()?.longitude }}</td>
+  <td class="column cell">
+    @if (coordinates !== null) {
+      {{ coordinates()?.accuracy }}
+    } @else {
+      ?
+    }
+  </td>
+  <td class="actions cell">
+    <!-- <button class="edit">Edit</button> -->
+    <app-coordinate-modal [actionText]="'Edit'" [callback]="modalCallback" />
+    <button class="delete" (click)="deleteCoordinate()">Delete</button>
+  </td>
+</tr>
+<app-toast />

@@ -1,0 +1,24 @@
+<dialog #dialog class="bubble" title="Add User">
+  <div id="content">
+    <div id="title">
+      <p>{{ actionText() }} Coordinate</p>
+    </div>
+    <div class="mbody">
+      <div>
+        <p>Latitude:</p>
+        <input type="number" [(ngModel)]="data.latitude" />
+      </div>
+      <div>
+        <p>Longitude:</p>
+        <input type="number" [(ngModel)]="data.longitude" />
+      </div>
+      <div>
+        <p>Accuracy:</p>
+        <input type="number" [(ngModel)]="data.accuracy" />
+        <button (click)="onSave()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<button (click)="OpenDialog()" class="primary mbutton">{{ actionText() }}</button>
+<app-toast/>

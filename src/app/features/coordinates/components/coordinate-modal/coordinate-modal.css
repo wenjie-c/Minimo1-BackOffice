@@ -1,0 +1,57 @@
+.bubble {
+  position: fixed;
+  top: 50%;
+  max-width: 600px;
+  margin-top: 10px;
+  background: #f2f3f4;
+  border: none;
+  border-radius: 1rem;
+}
+
+dialog::backdrop {
+  background-color: hsla(0, 0%, 50%, 0.25);
+}
+
+#title{
+    font-weight: bold;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+}
+
+#bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 8pt;
+}
+
+.mbutton {
+  margin: 8sp;
+  appearance: none;
+  border: 0;
+  border-radius: 14px;
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.primary {
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(17, 24, 39, 0.18);
+}
+
+.mbody{
+  display: flex;
+  flex-direction: row;
+}
