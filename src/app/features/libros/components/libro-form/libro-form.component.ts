@@ -19,11 +19,12 @@ import {
 import { Autor } from '../../../../Core/models/autor.model';
 import { Libro } from '../../../../Core/models/libro.model';
 import { LibroModal } from "../libro-modal/libro-modal";
+import { RecursosModal } from '../recursos-modal/recursos-modal';
 
 @Component({
   selector: 'app-libro-form',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, LibroModal],
+  imports: [CommonModule, ReactiveFormsModule, LibroModal, RecursosModal],
   templateUrl: './libro-form.component.html',
   styleUrl: './libro-form.component.css',
 })

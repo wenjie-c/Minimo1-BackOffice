@@ -15,6 +15,7 @@
     "src/app/features/**/*.ts",
     "src/app/shared/**/*.ts",
     "src/app/*.ts",
+
   ],
   "exclude": [
     "src/**/*.spec.ts"

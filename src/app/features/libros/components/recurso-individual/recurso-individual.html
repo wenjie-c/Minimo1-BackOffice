@@ -1,0 +1,54 @@
+<tr class="row">
+  <th class="cell">Id</th>
+  <th class="cell">Name</th>
+  <th class="cell">Url</th>
+  <th class="cell">Type</th>
+  <th class="cell">Libro</th>
+  <th class="cell">Actions</th>
+</tr>
+<tr class="row">
+  <td class="cell">
+    {{temporal._id}}
+  </td>
+  <td class="cell">
+     @if (!editMode()) {
+      {{ temporal.name }}
+    } @else {
+      <input type="text" [(ngModel)]="temporal.name" />
+    }
+  </td>
+
+  
+
+  <td class="cell">
+    @if (!editMode()) {
+      {{ temporal.url }}
+    } @else {
+      <input type="text" [(ngModel)]="temporal.url" />
+    }
+  </td>
+
+  <td class="cell">
+    @if (!editMode()) {
+      {{ temporal.type }}
+    } @else {
+      <input type="text" [(ngModel)]="temporal.type" />
+    }
+  </td>
+
+  <td class="cell">
+    @if (!editMode()) {
+      {{ temporal.libro }}
+    } @else {
+      <input type="text" [(ngModel)]="temporal.libro" />
+    }
+  </td>
+  <td class="cell">
+    @if (!editMode()) {
+      <button (click)="onEditClick()">Edit</button>
+      <button (click)="onDeleteClick()">Delete</button>
+    } @else {
+      <button (click)="onEditClick()">Save</button>
+    }
+  </td>
+</tr>

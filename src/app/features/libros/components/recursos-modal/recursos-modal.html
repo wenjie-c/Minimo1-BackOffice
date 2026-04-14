@@ -1,0 +1,44 @@
+<dialog #dialog class="bubble" title="Add User">
+  <div id="content">
+    <div id="title">
+      <p>Recursos del libro.</p>
+    </div>
+    <!-- @if (buffer().length < 1) {
+      <p>No hay ningun recurso</p>
+    } @else { -->
+    <table class="tabla">
+      @for (item of buffer(); track item._id) {
+        <app-recurso-individual [recurso]="item" />
+      }
+      @if (addMode() === true) {
+        <tr class="row">
+          <th class="cell">Name</th>
+          <th class="cell">Url</th>
+          <th class="cell">Type</th>
+          <th class="cell">Actions</th>
+        </tr>
+        <tr>
+          <td class="cell"><input type="text" [(ngModel)]="inputName" /></td>
+          <td class="cell"><input type="text" [(ngModel)]="inputUrl" /></td>
+          <td class="cell"><input type="text" [(ngModel)]="inputType" /></td>
+          <!-- Se que pordia ser un menu desplegable -->
+          <td class="cell"><button (click)="addRecurso()">Save</button></td>
+        </tr>
+      }
+    </table>
+    <!-- } -->
+    <div id="bottom">
+      @if (addMode() === false) {
+        <button (click)="addRecurso()" class="libro-form__button libro-form__button--primary">
+          Add
+        </button>
+      }
+      <button (click)="onClose()" class="libro-form__button libro-form__button--primary">
+        Close
+      </button>
+    </div>
+  </div>
+</dialog>
+<button (click)="OpenDialog()" class="libro-form__button libro-form__button--primary">
+  Abrir recursos del libro.
+</button>
